@@ -1,0 +1,10 @@
+syntax = "proto3";
+option go_package = "./pb";
+package proto;
+
+message searchResult{
+  string publisher = 1;
+  string publisher_date = 2;
+  string publish_field = 3;
+  string context = 4;
+}

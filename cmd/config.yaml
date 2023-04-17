@@ -1,0 +1,8 @@
+db:
+  DriverName: mysql
+  Database: db_Policy_Search
+  Port: 3306
+  UserName: root
+  Password: 44913730
+  Host: 127.0.0.1
+  Charset: utf8

@@ -1,0 +1,6 @@
+from golang:1.18.3
+maintainer lx
+workdir /go/src/
+copy . .
+expose 8080
+cmd ["/bin/bash","/go/src/script/build.sh"]

@@ -1,0 +1,20 @@
+syntax = "proto3";
+package proto;
+option go_package = "./pb";
+import "userdata_message.proto";
+import "searchresult_message.proto";
+
+
+message SearchPolicyRequest{
+  UserData data = 1;
+  repeated string keywords = 2;
+}
+
+message SearchPolicyResponse{
+    string searcher = 1;
+    repeated searchResult results = 2;
+}
+
+service SearchPolicyService{
+  rpc SearchPolicy(SearchPolicyRequest) returns(stream SearchPolicyResponse){};
+}
